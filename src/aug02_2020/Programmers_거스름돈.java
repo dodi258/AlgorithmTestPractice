@@ -13,9 +13,9 @@ package aug02_2020;
 import java.util.Arrays; 
 
 public class Programmers_거스름돈 {
-    public static void main(String[] args) {
-        
-    }
+//    public static void main(String[] args) {
+//        
+//    }
     
     public static int solution(int n, int[] money) {
         Arrays.sort(money); 
