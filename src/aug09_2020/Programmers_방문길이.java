@@ -11,14 +11,14 @@ package aug09_2020;
  */
 import java.util.HashMap; 
 public class Programmers_방문길이 {
-    public static void main(String[] args) {
-        String dirs1 = "ULURRDLLU"; 
-        String dirs2 = "LULLLLLLU";
-        
-        System.out.println(solution(dirs1)); 
-        System.out.println(solution(dirs2)); 
-        
-    }
+//    public static void main(String[] args) {
+//        String dirs1 = "ULURRDLLU"; 
+//        String dirs2 = "LULLLLLLU";
+//        
+//        System.out.println(solution(dirs1)); 
+//        System.out.println(solution(dirs2)); 
+//        
+//    }
     
     public static int solution(String dirs) {
         int answer = 0;
