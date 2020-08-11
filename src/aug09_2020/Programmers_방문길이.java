@@ -11,20 +11,20 @@ package aug09_2020;
  */
 import java.util.HashMap; 
 public class Programmers_방문길이 {
-//    public static void main(String[] args) {
-//        String dirs1 = "ULURRDLLU"; 
-//        String dirs2 = "LULLLLLLU";
-//        
-//        System.out.println(solution(dirs1)); 
-//        System.out.println(solution(dirs2)); 
-//        
-//    }
+    public static void main(String[] args) {
+        String dirs1 = "ULURRDLLU"; 
+        String dirs2 = "LULLLLLLU";
+        
+        System.out.println(solution(dirs1)); 
+        System.out.println(solution(dirs2)); 
+        
+    }
     
     public static int solution(String dirs) {
         int answer = 0;
         HashMap<Character, int[]> dirMap = new HashMap<>(); 
-        dirMap.put('U', new int[]{0, -1});
-        dirMap.put('D', new int[]{0, 1}); 
+        dirMap.put('U', new int[]{0, 1});
+        dirMap.put('D', new int[]{0, -1}); 
         dirMap.put('R', new int[]{1, 0}); 
         dirMap.put('L', new int[]{-1, 0}); 
         
