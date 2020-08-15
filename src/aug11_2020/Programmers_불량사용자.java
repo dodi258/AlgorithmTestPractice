@@ -9,11 +9,9 @@ package aug11_2020;
  *
  * @author 주세인1
  */
-import java.util.regex.Matcher; 
+
 import java.util.regex.Pattern; 
-import java.util.Set; 
 import java.util.*; 
-import java.util.HashSet; 
 public class Programmers_불량사용자 {
     
     static boolean[] visited; 
@@ -36,7 +34,6 @@ public class Programmers_불량사용자 {
     }
     
     public static int solution(String[] user_id, String[] banned_id) {
-        int answer = 1;
         len = banned_id.length; 
         visited = new boolean[user_id.length]; 
         matched = new ArrayList[len];
@@ -57,11 +54,7 @@ public class Programmers_불량사용자 {
             }
         }
         dfs(0); 
-        answer = set.size(); 
-//        for(String result: set) {
-//            System.out.println(result); 
-//        }
-        return answer;
+        return set.size(); 
     }
     
     public static void dfs(int level) {
