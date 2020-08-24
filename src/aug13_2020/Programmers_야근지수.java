@@ -42,7 +42,6 @@ public class Programmers_야근지수 {
                 break;
             } 
             work -= 1; 
-            
             queue.add(work); 
         }
         
