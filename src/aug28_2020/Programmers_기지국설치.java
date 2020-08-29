@@ -11,19 +11,19 @@ package aug28_2020;
  */
 import java.util.ArrayList; 
 public class Programmers_기지국설치 {
-     public static void main(String[] args) {
-        int N1 = 11; 
-        int[] stations1 = {4, 11};
-        int W1 = 1; 
-        
-        int N2 = 16; 
-        int[] stations2 = {9}; 
-        int W2 = 2; 
-        
-        System.out.println(solution(N1, stations1, W1));
-        System.out.println(solution(N2, stations2, W2)); 
-        
-    }
+//     public static void main(String[] args) {
+//        int N1 = 11; 
+//        int[] stations1 = {4, 11};
+//        int W1 = 1; 
+//        
+//        int N2 = 16; 
+//        int[] stations2 = {9}; 
+//        int W2 = 2; 
+//        
+//        System.out.println(solution(N1, stations1, W1));
+//        System.out.println(solution(N2, stations2, W2)); 
+//        
+//    }
     
     public static int solution(int n,int[] stations, int w) {
         int answer = 0; 
