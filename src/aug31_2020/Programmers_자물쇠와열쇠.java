@@ -52,7 +52,7 @@ public class Programmers_자물쇠와열쇠 {
         // rotate 3번
         int rotateCnt = 0; 
         while(rotateCnt++ < 3) {
-            System.out.println(rotateCnt + "번 돌림"); 
+//            System.out.println(rotateCnt + "번 돌림"); 
             rotateKey(); 
             if (tryUnlock()) {
                 return true; 
@@ -65,23 +65,21 @@ public class Programmers_자물쇠와열쇠 {
     public static void rotateKey() {
         int length = keys.size(); 
         while(length --> 0) {
-            Node node = keys.remove(length); 
-            keys.add(new Node(node.c, keySize - node.r)); 
+            Node node = keys.remove(0); 
+            keys.add(new Node(node.c, keySize - node.r-1)); 
         } 
     }
     // 확인 완료
     public static boolean tryUnlock() {
         for(int i = 0; i <= board.length - keySize; i++) {
             for(int j = 0; j <= board.length - keySize; j++) {
-                for(int k = 0; k < keys.size(); k++) {
-                    Node node = keys.get(k); 
+                for(Node node: keys) {
                     board[node.r + i][node.c + j] += 1; 
                 }
-                
-                for(int a = 0; a < board.length; a ++) {
-                    System.out.println(Arrays.toString(board[a])); 
-                }
-                System.out.println("꺅"); 
+//                for(int a = 0; a < board.length; a ++) {
+//                    System.out.println(Arrays.toString(board[a])); 
+//                }
+//                System.out.println("꺅"); 
                 if (canUnlock()) {
                     return true; 
                 }
