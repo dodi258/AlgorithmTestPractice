@@ -3,16 +3,16 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package sep09_07;
+package sep07_2020;
+
+import java.io.*; 
+import java.util.*;
 
 /**
  *
  * @author 주세인1
  */
-import java.util.*; 
-import java.io.*; 
-
-public class BOJ_Tree_트리의부모찾기 {
+public class BOJ_Tree_트리의부모찾기_BFS {
     static int[] parents; 
     static ArrayList<Integer>[] connections; 
     public static void main(String[] args) throws IOException {
@@ -34,7 +34,7 @@ public class BOJ_Tree_트리의부모찾기 {
             connections[n1].add(n2); 
             connections[n2].add(n1); 
         }
-        findParent(1);
+        findParent();
         for(int parent: Arrays.copyOfRange(parents, 2, N+1)) {
             out.write(parent + "\n"); 
         }
@@ -42,12 +42,16 @@ public class BOJ_Tree_트리의부모찾기 {
         out.close(); 
     }
     
-    public static void findParent(int now) {
-        
-        for(int child: connections[now]) {
-            if (parents[child] == 0) {
-                parents[child] = now; 
-                findParent(child); 
+    public static void findParent() {
+        Queue<Integer> queue = new LinkedList<>(); 
+        queue.add(1); 
+        while(! queue.isEmpty()) {
+            int parent = queue.poll(); 
+            
+            for(int child: connections[parent]) {
+                if (parents[child] != 0) continue; 
+                parents[child] = parent; 
+                queue.add(child); 
             }
         }
     }
